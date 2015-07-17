@@ -34,7 +34,8 @@ limitations under the License.
 			<tr>
 				<th><label for="roomId">Room: </label></th>
 				<td>
-				  <forms:select name="roomId">
+				<forms:textField name="roomId" value="${roomId}" style="width: 300px;" />
+				  <%--forms:select name="roomId">
 				  	<forms:option value="none" selected="${'none' == roomId}">(None)</forms:option>
 				  	<forms:option value="default" selected="${'default' == roomId}">(Default)</forms:option>
 				  	<c:if test="${!isRootProject}">
@@ -45,7 +46,7 @@ limitations under the License.
                         <c:out value="${roomIdEntry.key}"/>
                       </forms:option>
                     </c:forEach>
-                  </forms:select>
+                  </forms:select --%>
                 </td>
 			</tr>
 			<tr>
