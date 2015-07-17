@@ -94,14 +94,15 @@ limitations under the License.
 				<!-- TODO: Automatically refresh this on URL or token change. -->
 				<th><label for="defaultRoomId">Default room: </label></th>
 				<td>
-				  <forms:select name="defaultRoomId">
+				<forms:textField name="defaultRoomId" value="${defaultRoomId}" style="width: 300px;" />
+				  <%-- forms:select name="defaultRoomId">
 				  	<forms:option value="">(None)</forms:option>
                     <c:forEach var="roomIdEntry" items="${roomIdList}">
                       <forms:option value="${roomIdEntry.value}" selected="${roomIdEntry.value == defaultRoomId}">
                         <c:out value="${roomIdEntry.key}"/>
                       </forms:option>
                     </c:forEach>
-                  </forms:select>
+                  </forms:select --%>
                   &nbsp;
                   <a href="#" onclick="return HipChatAdmin.save()">Save to reload</a>
                 </td>
@@ -171,14 +172,15 @@ limitations under the License.
 				<!-- TODO: Automatically refresh this on URL or token change. -->
 				<th><label for="serverEventRoomId">Room: </label></th>
 				<td>
-				  <forms:select name="serverEventRoomId">
+				<forms:textField name="serverEventRoomId" value="${serverEventRoomId}" style="width: 300px;" />
+				  <%--forms:select name="serverEventRoomId">
 				  	<forms:option value="">(None)</forms:option>
                     <c:forEach var="roomIdEntry" items="${roomIdList}">
                       <forms:option value="${roomIdEntry.value}" selected="${roomIdEntry.value == serverEventRoomId}">
                         <c:out value="${roomIdEntry.key}"/>
                       </forms:option>
                     </c:forEach>
-                  </forms:select>
+                  </forms:select--%>
                   &nbsp;
                   <a href="#" onclick="return HipChatAdmin.save()">Save to reload</a>
                 </td>
